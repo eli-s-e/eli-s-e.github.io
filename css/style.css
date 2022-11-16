@@ -34,7 +34,7 @@ body {
   width: 200%;
   height: 200%;
   z-index: 200;
-  background-image: url("../ASS/noise.png");
+  background-image: url("../assets/noise.png");
   opacity: 0.05;
   pointer-events: none;
   animation: noise 1s steps(4) infinite;
