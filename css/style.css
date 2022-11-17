@@ -215,8 +215,8 @@ a:hover:after {
 
 .title {
   text-align: center;
-  width: 60%;
-  height: 85%;
+  width: 60vw;
+  height: 85vh;
   background-color: #fdefed;
   border-radius: 40% 55% 40% 55% / 50% 60% 35% 45% ;
   opacity: 0;
@@ -243,8 +243,8 @@ a:hover:after {
   position: fixed;
   z-index: 100;
   box-sizing: content-box;
-  bottom: 1.5rem;
-  right: 2rem;
+  bottom: 2vh;
+  right: 2vw;
   width: 7rem;
   height: 7rem;
   background-color: black;
@@ -284,8 +284,8 @@ a:hover:after {
   }
   to {
     opacity: 1;
-    width: 60%;
-    height: 85%;
+    width: 60vw;
+    height: 85vh;
   }
 }
 
@@ -614,7 +614,7 @@ footer a:hover:after {
 
 @media (max-width: 1200px) {
   .title {
-    width: 70%;
+    width: 70vw;
   }
   @keyframes load-title {
     from {
@@ -624,8 +624,8 @@ footer a:hover:after {
     }
     to {
       opacity: 1;
-      width: 70%;
-      height: 85%;
+      width: 70vw;
+      height: 85vh;
     }
   }
   .about-text {
@@ -641,7 +641,7 @@ footer a:hover:after {
 
 @media (max-width: 1000px){
   .title {
-    width: 80%;
+    width: 80vw;
   }
   @keyframes load-title {
     from {
@@ -651,8 +651,8 @@ footer a:hover:after {
     }
     to {
       opacity: 1;
-      width: 80%;
-      height: 85%;
+      width: 80vw;
+      height: 85vh;
     }
   }
   .about-text {
@@ -713,7 +713,7 @@ footer a:hover:after {
   }
   .title {
     font-size: 50%;
-    height: 60%;
+    height: 80vw;
   }
   @keyframes load-title {
     from {
@@ -723,16 +723,14 @@ footer a:hover:after {
     }
     to {
       opacity: 1;
-      width: 80%;
-      height: 60%;
+      width: 80vw;
+      height: 80vw;
     }
   }
   #contact-button {
     width: 5rem;
     height: 5rem;
     font-size: 70%;
-    bottom: 0.5rem;
-    right: 1rem;
   }
   .about-text {
     width: 100%;
@@ -774,22 +772,9 @@ footer a:hover:after {
 @media (max-width: 420px){
   .title {
     font-size: 40%;
-    height: 50%;
-  }
-  @keyframes load-title {
-    from {
-      opacity: 1;
-      width: 0;
-      height: 0;
-    }
-    to {
-      opacity: 1;
-      width: 80%;
-      height: 50%;
-    }
   }
   footer h1 {
-    font-size: 250%;
+    font-size: 230%;
   }
   footer h3 {
     font-size: 70%;
