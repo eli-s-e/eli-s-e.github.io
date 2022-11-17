@@ -69,6 +69,7 @@ body {
 
 .top-container {
   height: 100vh;
+  max-height: 100vh;
   background-color: #f0453b;
   display: flex;
   align-items: center;
@@ -214,6 +215,10 @@ a:hover:after {
 }
 
 .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
   width: 60vw;
   height: 85vh;
@@ -751,6 +756,10 @@ footer a:hover:after {
   .work-section {
     margin-bottom: 60vh;
   }
+  #back-button {
+    transform: none;
+    transition: none;
+  }
   .description-container {
     column-count: 1;
   }
@@ -774,7 +783,7 @@ footer a:hover:after {
     font-size: 40%;
   }
   footer h1 {
-    font-size: 230%;
+    font-size: 220%;
   }
   footer h3 {
     font-size: 70%;
