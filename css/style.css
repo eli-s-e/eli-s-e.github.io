@@ -221,7 +221,7 @@ a:hover:after {
   transform: translate(-50%, -50%);
   text-align: center;
   width: 60vw;
-  height: 85vh;
+  height: 40vw;
   background-color: #fdefed;
   border-radius: 40% 55% 40% 55% / 50% 60% 35% 45% ;
   opacity: 0;
@@ -290,7 +290,7 @@ a:hover:after {
   to {
     opacity: 1;
     width: 60vw;
-    height: 85vh;
+    height: 45vw;
   }
 }
 
@@ -321,8 +321,7 @@ a:hover:after {
 .about {
   display: flex;
   height: 100vh;
-  padding: 5rem;
-  padding-bottom: 3rem;
+  padding: 3rem;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -348,7 +347,7 @@ a:hover:after {
 /*--------------------my work section--------------------*/
 
 #my-work {
-  min-height: 100vh;
+  height: max-content;
   margin-bottom: 80vh;
   box-shadow: 0px 50px 50px 0px rgba(0,0,0,0.1);
 }
@@ -541,6 +540,7 @@ a:hover:after {
   font-size: 100%;
   font-family: 'Alegreya Sans', sans-serif;
   letter-spacing: normal;
+  line-height: 1.25;
 }
 
 /*--------------------footer section--------------------*/
@@ -588,6 +588,7 @@ footer a:hover:after {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
 }
 
 #end-marker {
@@ -609,9 +610,6 @@ footer a:hover:after {
   .title {
     font-size: 90%;
   }
-  .title-container {
-    font-size: 90%;
-  }
   footer h1 {
     font-size: 600%;
   }
@@ -620,6 +618,7 @@ footer a:hover:after {
 @media (max-width: 1200px) {
   .title {
     width: 70vw;
+    height: 52.5vw;
   }
   @keyframes load-title {
     from {
@@ -630,7 +629,7 @@ footer a:hover:after {
     to {
       opacity: 1;
       width: 70vw;
-      height: 85vh;
+      height: 52.5vw;
     }
   }
   .about-text {
@@ -647,6 +646,7 @@ footer a:hover:after {
 @media (max-width: 1000px){
   .title {
     width: 80vw;
+    height: 60vw;
   }
   @keyframes load-title {
     from {
@@ -657,7 +657,7 @@ footer a:hover:after {
     to {
       opacity: 1;
       width: 80vw;
-      height: 85vh;
+      height: 60vw;
     }
   }
   .about-text {
@@ -683,6 +683,20 @@ footer a:hover:after {
 @media (max-width: 800px){
   .title {
     font-size: 80%;
+    width: 90vw;
+    height: 67.5vw;
+  }
+  @keyframes load-title {
+    from {
+      opacity: 1;
+      width: 0;
+      height: 0;
+    }
+    to {
+      opacity: 1;
+      width: 90vw;
+      height: 67.5vw;
+    }
   }
 }
 
@@ -710,6 +724,9 @@ footer a:hover:after {
   footer h1 {
     font-size: 400%;
   }
+  footer h3 {
+    font-size: 80%;
+  }
 }
 
 @media (max-width: 560px){
@@ -718,6 +735,7 @@ footer a:hover:after {
   }
   .title {
     font-size: 50%;
+    width: 90vw;
     height: 80vw;
   }
   @keyframes load-title {
@@ -728,7 +746,7 @@ footer a:hover:after {
     }
     to {
       opacity: 1;
-      width: 80vw;
+      width: 90vw;
       height: 80vw;
     }
   }
@@ -740,6 +758,7 @@ footer a:hover:after {
   .about-text {
     width: 100%;
     font-size: 80%;
+    padding: 0;
   }
   #my-work {
     font-size: 60%;
@@ -760,30 +779,38 @@ footer a:hover:after {
     transform: none;
     transition: none;
   }
+  .work-section-main {
+    width: 90%;
+  }
+  .title-container {
+    width: 90%;
+  }
   .description-container {
     column-count: 1;
   }
   footer {
     height: 60vh;
   }
-  footer h1 {
-    font-size: 300%;
-  }
-  footer h3 {
-    font-size: 80%;
-  }
-  #end-marker {
-    width: 3rem;
-    height: 3rem;
+  .footer-content {
+    height: 70%;
   }
 }
 
 @media (max-width: 420px){
   .title {
-    font-size: 40%;
+    width: 90vw;
   }
-  footer h1 {
-    font-size: 220%;
+  @keyframes load-title {
+    from {
+      opacity: 1;
+      width: 0;
+      height: 0;
+    }
+    to {
+      opacity: 1;
+      width: 90vw;
+      height: 90vw;
+    }
   }
   footer h3 {
     font-size: 70%;
