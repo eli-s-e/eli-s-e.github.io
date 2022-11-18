@@ -35,6 +35,7 @@ body {
   height: 200%;
   z-index: 200;
   background-image: url("../assets/noise.png");
+  filter: sepia(0.1);
   opacity: 0.05;
   pointer-events: none;
   animation: noise 1s steps(4) infinite;
@@ -248,7 +249,7 @@ a:hover:after {
   position: fixed;
   z-index: 100;
   box-sizing: content-box;
-  bottom: 2vh;
+  bottom: 2vw;
   right: 2vw;
   width: 7rem;
   height: 7rem;
@@ -732,11 +733,12 @@ footer a:hover:after {
 @media (max-width: 560px){
   header {
     font-size: 80%;
+    padding: 1rem 1rem;
   }
   .title {
     font-size: 50%;
     width: 90vw;
-    height: 80vw;
+    height: 90vw;
   }
   @keyframes load-title {
     from {
@@ -747,7 +749,7 @@ footer a:hover:after {
     to {
       opacity: 1;
       width: 90vw;
-      height: 80vw;
+      height: 90vw;
     }
   }
   #contact-button {
@@ -762,7 +764,11 @@ footer a:hover:after {
   }
   #my-work {
     font-size: 60%;
+    padding-bottom: 5rem;
     margin-bottom: 60vh;
+  }
+  .work {
+    width: 90%;
   }
   .work-img {
     width: 20%;
@@ -797,21 +803,6 @@ footer a:hover:after {
 }
 
 @media (max-width: 420px){
-  .title {
-    width: 90vw;
-  }
-  @keyframes load-title {
-    from {
-      opacity: 1;
-      width: 0;
-      height: 0;
-    }
-    to {
-      opacity: 1;
-      width: 90vw;
-      height: 90vw;
-    }
-  }
   footer h3 {
     font-size: 70%;
   }
