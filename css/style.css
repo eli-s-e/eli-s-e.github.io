@@ -318,7 +318,7 @@ a:hover:after {
 
 /*--------------------about section--------------------*/
 
-.about {
+#about {
   display: flex;
   height: 100vh;
   padding: 3rem;
