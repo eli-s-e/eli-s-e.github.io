@@ -1,3 +1,38 @@
+function run(){
+  window.addEventListener('scroll', function(event)
+  {
+    var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+    var scrollHeight = (document.documentElement && document.documentElement.scrollHeight) || document.body.scrollHeight;
+
+    if((scrollTop + window.innerHeight) >= scrollHeight)
+    {
+      document.getElementById('end-marker').classList.add('active');
+    }
+    else{
+      document.getElementById('end-marker').classList.remove('active');
+    }
+
+    colourChange();
+    showTitle();
+  });
+}
+
+function colourChange(){
+  if(document.getElementById('my-work').getBoundingClientRect().top <= ((window.innerHeight || document.documentElement.clientHeight) - 100))
+  {
+    document.getElementById('main').classList.add('active');
+  }
+  else {
+    document.getElementById('main').classList.remove('active');
+  }
+}
+
+function showTitle(){
+  if(document.getElementById('my-work-title').getBoundingClientRect().top <= ((window.innerHeight || document.documentElement.clientHeight) - 200)){
+    document.getElementById('my-work-title').classList.add('active');
+  }
+}
+
 function circleText() {
   new CircleType(document.getElementById('circletext'));
 }
@@ -12,30 +47,6 @@ function scrollToFooter(){
     });
     footerInView = true;
   }
-  else {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
-    footerInView = false;
-  }
-}
-
-function run(){
-  window.addEventListener('scroll', function(event)
-  {
-    var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-    var scrollHeight = (document.documentElement && document.documentElement.scrollHeight) || document.body.scrollHeight;
-
-    if((scrollTop + window.innerHeight) >= scrollHeight)
-    {
-      document.getElementById('end-marker').classList.add('active');
-    }
-    else{
-      document.getElementById('end-marker').classList.remove('active');
-    }
-  });
 }
 
 function hoverImage(item){

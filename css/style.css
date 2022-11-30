@@ -35,7 +35,7 @@ body {
   height: 200%;
   z-index: 200;
   background-image: url("../assets/noise.png");
-  opacity: 0.075;
+  opacity: 0;
   pointer-events: none;
   animation: noise 1s steps(4) infinite;
 }
@@ -55,6 +55,19 @@ body {
   }
 }
 
+#main {
+  background-color: #f0453b;
+  color: #fdefed;
+  margin-bottom: 80vh;
+  box-shadow: 0px 50px 50px 0px rgba(0,0,0,0.1);
+  transition: background-color 1s ease, color 1s ease;
+}
+
+#main.active {
+  background-color: #fdefed;
+  color: #f0453b;
+}
+
 .container {
   position: relative;
   width: 100vw;
@@ -63,27 +76,12 @@ body {
   margin: 0;
 }
 
-.container-content {
-  padding: 2rem;
-}
-
 .top-container {
   height: 100vh;
   max-height: 100vh;
-  background-color: #f0453b;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.container-pink {
-  background: #fdefed;
-  color: #f0453b;
-}
-
-.container-red {
-  background: #f0453b;
-  color: #fdefed;
 }
 
 .track {
@@ -98,11 +96,6 @@ body {
   animation: scroll 15s linear infinite;
 }
 
-.marquee h2 {
-  font-family: 'Open Sans', sans-serif;
-  letter-spacing: .25rem;
-}
-
 @keyframes scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
@@ -114,6 +107,30 @@ h1 {
   padding: 0;
   margin: 0;
   color: #f0453b;
+}
+
+h1 span {
+  display: inline-block;
+  opacity: 0;
+  animation: float 2s forwards;
+  animation-delay: calc(.05s * var(--i));
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(25%);
+  }
+  10% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(-5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 h2 {
@@ -331,6 +348,7 @@ a:hover:after {
   width: 60%;
   display: flex;
   flex-direction: column;
+  color: #fdefed;
 }
 
 .about-text h3 {
@@ -348,8 +366,14 @@ a:hover:after {
 
 #my-work {
   height: max-content;
-  margin-bottom: 80vh;
-  box-shadow: 0px 50px 50px 0px rgba(0,0,0,0.1);
+}
+
+#my-work h1 {
+  font-size: 700%;
+}
+
+#my-work h1 span {
+  animation-play-state: paused;
 }
 
 #my-work h3 {
@@ -362,16 +386,15 @@ a:hover:after {
   font-family: 'Libre Baskerville', sans-serif;
 }
 
-#my-work .marquee {
-  margin-bottom: 3rem;
+#my-work-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10vh;
+  animation: none;
 }
 
-#my-work .marquee h2 {
-  font-size: 500%;
-  font-family: 'Abhaya Libre', serif;
-  letter-spacing: normal;
-  color: #f0453b;
-  text-shadow: 5px 5px rgba(240, 69, 59, 0.25);
+#my-work-title.active > h1 span {
+  animation-play-state: running;
 }
 
 .work-container{
@@ -404,7 +427,7 @@ a:hover:after {
 
 .work-img {
   position: absolute;
-  transform: translate(25%, -50%);
+  transform: translate(-50%, -50%);
   width: 19rem;
   height: 14rem;
   opacity: 0;
@@ -418,6 +441,10 @@ a:hover:after {
 
 .work-img img {
   height: 100%;
+}
+
+.work-title:hover {
+  cursor: none;
 }
 
 .work-title:hover + .work-img {
@@ -443,6 +470,8 @@ a:hover:after {
   padding-top: 5rem;
   padding-bottom: 5rem;
   margin-bottom: 80vh;
+  background-color: #fdefed;
+  color: #f0453b;
   box-shadow: 0px 50px 50px 0px rgba(0,0,0,0.1);
 }
 
@@ -459,30 +488,6 @@ a:hover:after {
 
 .work-section h1 {
   font-size: 700%;
-}
-
-.work-section h1 span {
-  display: inline-block;
-  opacity: 0;
-  animation: float 2s forwards;
-  animation-delay: calc(.05s * var(--i));
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0.5rem);
-  }
-  10% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 1;
-    transform: translateY(-0.1rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .work-section h3 {
@@ -663,11 +668,12 @@ footer a:hover:after {
   .about-text {
     width: 80%;
   }
-  #my-work {
-    font-size: 90%;
+  #my-work-title h1 {
+    font-size: 500%;
   }
   .work {
     width: 80%;
+    font-size: 90%;
   }
   .work-section {
     font-size: 90%;
@@ -676,7 +682,7 @@ footer a:hover:after {
     width: 80%;
   }
   footer h1 {
-    font-size: 500%;
+    font-size: 600%;
   }
 }
 
@@ -707,7 +713,10 @@ footer a:hover:after {
   .about-text {
     font-size: 90%;
   }
-  #my-work {
+  #my-work h1 {
+    font-size: 500%;
+  }
+  .work {
     font-size: 80%;
   }
   .work-img {
@@ -730,9 +739,8 @@ footer a:hover:after {
 }
 
 @media (max-width: 560px){
-  #noise {
-    filter: sepia(0.1);
-    filter: saturate(0.75);
+  #main {
+    margin-bottom: 60vh;
   }
   header {
     font-size: 80%;
@@ -766,12 +774,12 @@ footer a:hover:after {
     padding: 0;
   }
   #my-work {
-    font-size: 60%;
     padding-bottom: 5rem;
     margin-bottom: 60vh;
   }
   .work {
     width: 90%;
+    font-size: 60%;
   }
   .work-img {
     width: 20%;
@@ -780,9 +788,6 @@ footer a:hover:after {
   .work-title:hover + .work-img {
     width: 20%;
     height: 20%;
-  }
-  .work-section {
-    margin-bottom: 60vh;
   }
   #back-button {
     transform: none;
