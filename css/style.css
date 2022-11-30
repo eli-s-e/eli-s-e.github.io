@@ -789,6 +789,9 @@ footer a:hover:after {
     width: 20%;
     height: 20%;
   }
+  .work-section {
+    margin-bottom: 60vh;
+  }
   #back-button {
     transform: none;
     transition: none;
