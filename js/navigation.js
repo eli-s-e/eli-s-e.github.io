@@ -1,9 +1,9 @@
 function run(){
-  var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-  var scrollHeight = (document.documentElement && document.documentElement.scrollHeight) || document.body.scrollHeight;
-
   window.addEventListener('scroll', function(event)
   {
+    var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+    var scrollHeight = (document.documentElement && document.documentElement.scrollHeight) || document.body.scrollHeight;
+
     if((scrollTop + window.innerHeight) >= scrollHeight)
     {
       document.getElementById('end-marker').classList.add('active');
@@ -40,7 +40,7 @@ function circleText() {
 function scrollToFooter(){
   var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
   var scrollHeight = (document.documentElement && document.documentElement.scrollHeight) || document.body.scrollHeight;
-  
+
   if((scrollTop + window.innerHeight) < scrollHeight){
     window.scrollTo({
       top: document.body.scrollHeight,
