@@ -21,9 +21,11 @@ function colourChange(){
     const box = sections[i].getBoundingClientRect();
     if(((box.top + box.bottom) / 2) > 0 && ((box.top + box.bottom) / 2) <= ((window.innerHeight || document.documentElement.clientHeight))){
       document.body.classList.add('invert');
+      document.querySelector('#logo').classList.add('active');
       break;
     } else{
       document.body.classList.remove('invert');
+      document.querySelector('#logo').classList.remove('active');
     }
   }
 }

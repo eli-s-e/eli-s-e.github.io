@@ -42,23 +42,35 @@ a {
 
 /********** Header and logo **********/
 
-.logo {
+#logo {
   position: fixed;
   top: 0;
   left: calc(50vw - 8.3vh);
   height: 15vh;
+  z-index: 100;
 }
 
-.logo img {
+#logo img {
+  position: fixed;
   height: inherit;
 }
 
 #logo-pink {
   opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 #logo-navy {
   opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+#logo.active > #logo-pink {
+  opacity: 1;
+}
+
+#logo.active > #logo-navy {
+  opacity: 0;
 }
 
 /********** Title animation stuff **********/
