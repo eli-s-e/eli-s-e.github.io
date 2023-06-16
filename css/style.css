@@ -45,7 +45,7 @@ a {
 #logo {
   position: fixed;
   top: 0;
-  left: calc(50vw - 8.3vh);
+  left: 50vw;
   height: 15vh;
   z-index: 100;
 }
@@ -53,6 +53,7 @@ a {
 #logo img {
   position: fixed;
   height: inherit;
+  transform: translateX(-50%);
 }
 
 #logo-pink {
