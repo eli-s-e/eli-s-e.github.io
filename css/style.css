@@ -3,7 +3,6 @@
 html {
   scroll-behavior: smooth;
   box-sizing: border-box;
-  font-size: 1;
 }
 
 * {
@@ -19,6 +18,7 @@ body {
   background-color: #ffe4f1;
   color: #060644;
   font-family: 'Raleway', sans-serif;
+  font-size: 100%;
   transition: background-color 0.5s ease;
 }
 
@@ -287,42 +287,180 @@ a {
   height: auto;
 }
 
-#tsm-1 {
-  flex: 1.779;
+.with-margin {
   margin-right: 3vh;
 }
-#tsm-2 {
-  flex: 0.663;
-  margin-right: 3vh;
-}
+
+#tsm-1 { flex: 1.779; }
+#tsm-2 { flex: 0.663; }
 #tsm-3 { flex: 0.747; }
 
-#portfolio-1 {
-  flex: 1.334;
-  margin-right: 3vh;
-}
-#portfolio-2 {
-  flex: 1.005;
-  margin-right: 3vh;
-}
+#portfolio-1 { flex: 1.334; }
+#portfolio-2 { flex: 1.005; }
 #portfolio-3 { flex: 1.779; }
 
-#recordshop-1 {
-  flex: 1.779;
-  margin-right: 3vh;
-}
-#recordshop-2 {
-  flex: 0.667;
-  margin-right: 3vh;
-}
+#recordshop-1 { flex: 1.779; }
+#recordshop-2 { flex: 0.667; }
 #recordshop-3 { flex: 0.747; }
 
-#nhs-1 {
-  flex: 1.414;
-  margin-right: 3vh;
-}
-#nhs-2 {
-  flex: 1.414;
-  margin-right: 3vh;
-}
+#nhs-1 { flex: 1.414; }
+#nhs-2 { flex: 1.414; }
 #nhs-3 { flex : 0.795; }
+
+/********** Media queries **********/
+
+@media screen and (max-width: 1100px){
+  body {
+    font-size: 90%;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  body {
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 900px){
+  body {
+    font-size: 70%;
+  }
+  #logo {
+    height: 12vh;
+  }
+  .about-text {
+    width: 70%;
+  }
+  .about-text p {
+    font-size: 110%;
+  }
+  .right-align {
+    justify-content: flex-end;
+    margin-bottom: 5vh;
+  }
+  .list-item {
+    margin-top: 5vh;
+    padding-bottom: 5vh;
+  }
+  .tags {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+  .tags h3 {
+    font-size: 130%;
+  }
+  .description {
+    margin-top: 5vh;
+    padding-bottom: 5vh;
+  }
+  .description p {
+    font-size: 110%;
+  }
+  .gallery {
+    padding-bottom: 5vh;
+    margin-bottom: 5vh;
+  }
+}
+
+@media screen and (max-width: 800px){
+  body {
+    font-size: 60%;
+  }
+  .about-text p {
+    font-size: 120%;
+  }
+  .title-section {
+    bottom: 5vh;
+    left: 5vh;
+  }
+  #about-content{
+    width: calc(100% - 10vh);
+  }
+  .list {
+    width: calc(100% - 10vh);
+  }
+  .tags {
+    width: calc(100% - 10vh);
+  }
+  .tags h3 {
+    font-size: 140%;
+  }
+  .description {
+    width: calc(100% - 10vh);
+  }
+  .description p {
+    font-size: 120%;
+  }
+  .gallery {
+    width: calc(100% - 10vh);
+  }
+}
+
+@media screen and (max-width: 600px){
+  body {
+    font-size: 50%;
+  }
+  .about-text {
+    width: 80%;
+  }
+  .about-text p {
+    font-size: 140%;
+  }
+  .tags h3 {
+    font-size: 160%;
+  }
+  .description p {
+    font-size: 140%;
+  }
+}
+
+@media screen and (max-width: 500px){
+  body {
+    font-size: 40%;
+  }
+  .about-text p {
+    font-size: 170%;
+  }
+  .title-section {
+    bottom: 3vh;
+    left: 3vh;
+  }
+  #about-content{
+    width: calc(100% - 6vh);
+  }
+  .list {
+    width: calc(100% - 6vh);
+  }
+  .right-align {
+    justify-content: flex-end;
+    margin-bottom: 3vh;
+  }
+  .list-item {
+    margin-top: 3vh;
+    padding-bottom: 3vh;
+  }
+  .tags {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    width: calc(100% - 6vh);
+  }
+  .tags h3 {
+    font-size: 180%;
+  }
+  .description {
+    margin-top: 3vh;
+    padding-bottom: 3vh;
+    width: calc(100% - 6vh);
+  }
+  .description p {
+    font-size: 160%;
+  }
+  .gallery {
+    padding-bottom: 3vh;
+    margin-bottom: 3vh;
+    width: calc(100% - 6vh);
+  }
+  .with-margin {
+    margin-right: 1vh;
+  }
+}
